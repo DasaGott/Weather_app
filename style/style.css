@@ -1,0 +1,52 @@
+body {
+  font-family: monospace;
+}
+
+h1 {
+  margin: 18px 0px 10px;
+  text-align: left;
+  color: #3b3c36;
+  font-size: 45px;
+}
+
+ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+.weather_app {
+  margin: 20px 100px;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  padding: 20px 40px;
+  padding-right: 70px;
+  border-radius: 5px;
+}
+
+.search_bar {
+  border-radius: 5px;
+  border: 1px rgba(0, 0, 0, 0.4) solid;
+  box-shadow: 10px 5px 10px #edb9b9;
+}
+
+.current_day {
+  color: #232b2b;
+  line-height: 1.4;
+  font-size: 15px;
+}
+
+.current_weather_img {
+  width: 70px;
+}
+
+.current_units {
+  font-size: 40px;
+}
+
+a {
+  color: grey;
+}
+
+a:hover {
+  text-decoration: none;
+  color: black;
+}
