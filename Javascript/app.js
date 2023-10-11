@@ -112,45 +112,6 @@ currentDay.innerHTML = `${day} ${hours}:${minutes}`;
 
 // End of previous task
 
-// Change temperature (from C to F and vice versa)
-// function convertToFarenheit(event) {
-//   event.preventDefault();
-//   let temperatureElement = document.querySelector(
-//     "#temperature"
-//   );
-//   let temperature = temperatureElement.innerHTML;
-//   temperature = Number(temperature);
-//   temperatureElement.innerHTML = Math.round(
-//     (temperature * 9) / 5 + 32
-//   );
-// }
-
-// function convertToCelsius(event) {
-//   event.preventDefault();
-//   let temperatureElement = document.querySelector(
-//     "#temperature"
-//   );
-//   temperatureElement.innerHTML = 19;
-// }
-
-// let farenheitLink = document.querySelector(
-//   "#farenheit-link"
-// );
-// farenheitLink.addEventListener(
-//   "click",
-//   convertToFarenheit
-// );
-
-// let celsiusLink = document.querySelector(
-//   "#celsius-link"
-// );
-// celsiusLink.addEventListener(
-//   "click",
-//   convertToCelsius
-// );
-
-// End of previous task
-
 // GEO API
 let currentCity = document.querySelector(
   "#current-city"
