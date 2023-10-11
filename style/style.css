@@ -15,7 +15,7 @@ ul {
 }
 
 .weather_app {
-  margin: 20px 100px;
+  margin: 20px 100px 5px 100px;
   border: 1px solid rgba(0, 0, 0, 0.4);
   padding: 20px 40px;
   padding-right: 70px;
@@ -48,5 +48,20 @@ a {
 
 a:hover {
   text-decoration: none;
-  color: black;
+  color: #000;
+}
+
+.signature {
+  color: #000;
+  margin: 0px 110px;
+}
+
+.open_source_link {
+  color: #8a1253;
+  transition: all 200ms ease-in-out;
+}
+
+.open_source_link:hover {
+  font-size: 18px;
+  text-decoration: underline;
 }
