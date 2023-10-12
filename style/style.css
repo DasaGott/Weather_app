@@ -4,7 +4,6 @@ body {
 
 h1 {
   margin: 18px 0px 10px;
-  text-align: left;
   color: #3b3c36;
   font-size: 45px;
 }
@@ -14,12 +13,17 @@ ul {
   list-style-type: none;
 }
 
+.weather_app-wrapper {
+  max-width: 800px;
+  margin: 20px auto;
+}
+
 .weather_app {
-  margin: 20px 100px 5px 100px;
   border: 1px solid rgba(0, 0, 0, 0.4);
   padding: 20px 40px;
   padding-right: 70px;
   border-radius: 5px;
+  margin-bottom: 10px;
 }
 
 .search_bar {
@@ -49,11 +53,6 @@ a {
 a:hover {
   text-decoration: none;
   color: #000;
-}
-
-.signature {
-  color: #000;
-  margin: 0px 110px;
 }
 
 .open_source_link {

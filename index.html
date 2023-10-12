@@ -21,191 +21,194 @@
   </head>
   <body>
     <div class="container">
-      <div class="weather_app">
-        <form id="searching-form">
+      <div class="weather_app-wrapper">
+        <div class="weather_app">
+          <form id="searching-form">
+            <div class="row">
+              <div class="col-6">
+                <input
+                  class="form-control search_bar"
+                  type="search"
+                  placeholder="Enter a city"
+                  id="enter-a-city-form"
+                  autocomplete="off"
+                />
+              </div>
+              <div class="col-3">
+                <button
+                  type="button"
+                  class="btn btn-outline-primary searchButton w-100"
+                >
+                  Search 🔍
+                </button>
+              </div>
+              <div class="col-3">
+                <button
+                  type="button"
+                  class="btn btn-outline-danger w-100"
+                  id="current-city"
+                >
+                  Current city 📍
+                </button>
+              </div>
+            </div>
+          </form>
+          <div>
+            <h1></h1>
+            <ul class="current_day">
+              <li id="currentDate"></li>
+              <li id="currentDay"></li>
+              <li id="weather-description"></li>
+            </ul>
+          </div>
           <div class="row">
-            <div class="col-6">
-              <input
-                class="form-control search_bar"
-                type="search"
-                placeholder="Enter a city"
-                id="enter-a-city-form"
-                autocomplete="off"
-              />
-            </div>
-            <div class="col-3">
-              <button
-                type="button"
-                class="btn btn-outline-primary searchButton w-100"
-              >
-                Search 🔍
-              </button>
-            </div>
-            <div class="col-3">
-              <button
-                type="button"
-                class="btn btn-outline-danger w-100"
-                id="current-city"
-              >
-                Current city 📍
-              </button>
-            </div>
-          </div>
-        </form>
-        <div>
-          <h1></h1>
-          <ul class="current_day">
-            <li id="currentDate"></li>
-            <li id="currentDay"></li>
-            <li id="weather-description"></li>
-          </ul>
-        </div>
-        <div class="row">
-          <div class="col">
-            <p>
-              <img
-                src="images/Partly cloudy.png"
-                alt="weather icon"
-                class="current_weather_img"
-              />
-              <span
-                class="temperature"
-                id="temperature"
-              ></span
-              ><span class="units"
-                ><a href="#">°C</a>/<a href="#"
-                  >°F</a
+            <div class="col">
+              <p>
+                <img
+                  src="images/Partly cloudy.png"
+                  alt="weather icon"
+                  class="current_weather_img"
+                />
+                <span
+                  class="temperature"
+                  id="temperature"
                 ></span
-              >
-            </p>
+                ><span class="units"
+                  ><a href="#">°C</a>/<a href="#"
+                    >°F</a
+                  ></span
+                >
+              </p>
+            </div>
+            <div class="col">
+              <ul>
+                <li>
+                  Precipitation:
+                  <span id="precipitation"></span
+                  >%
+                </li>
+                <li>
+                  Humidity:
+                  <span id="humidity"></span>%
+                </li>
+                <li>
+                  Wind:
+                  <span id="wind"></span>km/h
+                </li>
+              </ul>
+            </div>
           </div>
-          <div class="col">
+          <div>
             <ul>
-              <li>
-                Precipitation:
-                <span id="precipitation"></span>%
-              </li>
-              <li>
-                Humidity:
-                <span id="humidity"></span>%
-              </li>
-              <li>
-                Wind:
-                <span id="wind"></span>km/h
-              </li>
+              <div class="row">
+                <div class="col">
+                  <li>
+                    Tue
+                    <br />
+                    <img
+                      src="images/Partly cloudy.png"
+                      alt="weather icon"
+                      width="50px"
+                    />
+                    <br />
+                    <span class="units">
+                      27°C/<a
+                        href="#"
+                        class="farenheit"
+                        >°F</a
+                      ></span
+                    >
+                  </li>
+                </div>
+                <div class="col">
+                  <li>
+                    Wed
+                    <br />
+                    <img
+                      src="images/Partly cloudy.png"
+                      alt="weather icon"
+                      width="50px"
+                    />
+                    <br />
+                    <span class="units">
+                      27°C/<a
+                        href="#"
+                        class="farenheit"
+                        >°F</a
+                      ></span
+                    >
+                  </li>
+                </div>
+                <div class="col">
+                  <li>
+                    Thu
+                    <br />
+                    <img
+                      src="images/Partly cloudy.png"
+                      alt="weather icon"
+                      width="50px"
+                    />
+                    <br />
+                    <span class="units">
+                      27°C/<a
+                        href="#"
+                        class="farenheit"
+                        >°F</a
+                      ></span
+                    >
+                  </li>
+                </div>
+                <div class="col">
+                  <li>
+                    Fri
+                    <br />
+                    <img
+                      src="images/Partly cloudy.png"
+                      alt="weather icon"
+                      width="50px"
+                    />
+                    <br />
+                    <span class="units">
+                      27°C/<a
+                        href="#"
+                        class="farenheit"
+                        >°F</a
+                      ></span
+                    >
+                  </li>
+                </div>
+                <div class="col">
+                  <li>
+                    Sat
+                    <br />
+                    <img
+                      src="images/Partly cloudy.png"
+                      alt="weather icon"
+                      width="50px"
+                    />
+                    <br />
+                    <span class="units">
+                      27°C/<a
+                        href="#"
+                        class="farenheit"
+                        >°F</a
+                      ></span
+                    >
+                  </li>
+                </div>
+              </div>
             </ul>
           </div>
         </div>
-        <div>
-          <ul>
-            <div class="row">
-              <div class="col">
-                <li>
-                  Tue
-                  <br />
-                  <img
-                    src="images/Partly cloudy.png"
-                    alt="weather icon"
-                    width="50px"
-                  />
-                  <br />
-                  <span class="units">
-                    27°C/<a
-                      href="#"
-                      class="farenheit"
-                      >°F</a
-                    ></span
-                  >
-                </li>
-              </div>
-              <div class="col">
-                <li>
-                  Wed
-                  <br />
-                  <img
-                    src="images/Partly cloudy.png"
-                    alt="weather icon"
-                    width="50px"
-                  />
-                  <br />
-                  <span class="units">
-                    27°C/<a
-                      href="#"
-                      class="farenheit"
-                      >°F</a
-                    ></span
-                  >
-                </li>
-              </div>
-              <div class="col">
-                <li>
-                  Thu
-                  <br />
-                  <img
-                    src="images/Partly cloudy.png"
-                    alt="weather icon"
-                    width="50px"
-                  />
-                  <br />
-                  <span class="units">
-                    27°C/<a
-                      href="#"
-                      class="farenheit"
-                      >°F</a
-                    ></span
-                  >
-                </li>
-              </div>
-              <div class="col">
-                <li>
-                  Fri
-                  <br />
-                  <img
-                    src="images/Partly cloudy.png"
-                    alt="weather icon"
-                    width="50px"
-                  />
-                  <br />
-                  <span class="units">
-                    27°C/<a
-                      href="#"
-                      class="farenheit"
-                      >°F</a
-                    ></span
-                  >
-                </li>
-              </div>
-              <div class="col">
-                <li>
-                  Sat
-                  <br />
-                  <img
-                    src="images/Partly cloudy.png"
-                    alt="weather icon"
-                    width="50px"
-                  />
-                  <br />
-                  <span class="units">
-                    27°C/<a
-                      href="#"
-                      class="farenheit"
-                      >°F</a
-                    ></span
-                  >
-                </li>
-              </div>
-            </div>
-          </ul>
+        <div class="signature">
+          <a
+            href="https://github.com/DasaGott/Weather_app"
+            target="_blank"
+            class="open_source_link"
+            >Open-source code</a
+          >
+          by Dasa Gottlieber
         </div>
-      </div>
-      <div class="signature">
-        <a
-          href="https://github.com/DasaGott/Weather_app"
-          target="_blank"
-          class="open_source_link"
-          >Open-source code</a
-        >
-        by Dasa Gottlieber
       </div>
     </div>
     <script src="Javascript/app.js"></script>
