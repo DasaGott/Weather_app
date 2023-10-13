@@ -13,7 +13,8 @@ function displayWeather(response) {
   // Description of weather
   document.querySelector(
     "#weather-description"
-  ).innerHTML = response.data.weather[0].main;
+  ).innerHTML =
+    response.data.weather[0].description;
 
   // Humidity, Wind
 
