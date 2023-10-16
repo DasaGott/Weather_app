@@ -23,6 +23,14 @@ function displayWeather(response) {
 
   document.querySelector("#wind").innerHTML =
     Math.round(response.data.wind.speed);
+
+  let icon = response.data.weather[0].icon;
+  document
+    .querySelector("#icon")
+    .setAttribute(
+      "src",
+      `https://openweathermap.org/img/wn/${icon}@2x.png`
+    );
 }
 
 function search(city) {
