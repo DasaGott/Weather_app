@@ -60,15 +60,9 @@ function handleSubmit(event) {
 let searchCity = document.querySelector(
   "#searching-form"
 );
-let searchButton = document.querySelector(
-  ".searchButton"
-);
+
 searchCity.addEventListener(
   "submit",
-  handleSubmit
-);
-searchButton.addEventListener(
-  "click",
   handleSubmit
 );
 
