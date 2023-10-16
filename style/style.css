@@ -54,6 +54,16 @@ ul {
   top: -25px;
   left: 5px;
 }
+
+.active {
+  color: #000;
+}
+
+.active:hover {
+  cursor: default;
+  text-decoration: none;
+}
+
 a {
   color: grey;
 }

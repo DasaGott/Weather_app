@@ -10,6 +10,7 @@ function displayWeather(response) {
     "#temperature"
   ).innerHTML = currentTemperature;
 
+  celsiusTemp = response.data.main.temp;
   // Description of weather
   document.querySelector(
     "#weather-description"
@@ -57,16 +58,6 @@ function handleSubmit(event) {
   search(city);
 }
 
-let searchCity = document.querySelector(
-  "#searching-form"
-);
-
-searchCity.addEventListener(
-  "submit",
-  handleSubmit
-);
-
-search("Bratislava");
 // End of previous task
 
 // Display current date and time
@@ -138,6 +129,7 @@ function getCurrentLocation(event) {
     showPosition
   );
 }
+
 function showPosition(position) {
   let latitude = position.coords.latitude;
   let longitude = position.coords.longitude;
@@ -145,3 +137,62 @@ function showPosition(position) {
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayWeather);
 }
+
+// End of GEO API
+
+// Unit conversion
+function displayFarenheitTemp(event) {
+  event.preventDefault();
+  fahrenheitTemperature.classList.add("active");
+  celsiusTemperature.classList.remove("active");
+
+  let currentTemperature = document.querySelector(
+    "#temperature"
+  );
+  let fahrenheitTemp = Math.round(
+    (celsiusTemp * 9) / 5 + 32
+  );
+  currentTemperature.innerHTML = fahrenheitTemp;
+}
+
+function displayCelsiusTemp(event) {
+  event.preventDefault();
+  celsiusTemperature.classList.add("active");
+  fahrenheitTemperature.classList.remove(
+    "active"
+  );
+
+  let currentTemperature = document.querySelector(
+    "#temperature"
+  );
+  currentTemperature.innerHTML =
+    Math.round(celsiusTemp);
+}
+
+let searchCity = document.querySelector(
+  "#searching-form"
+);
+
+searchCity.addEventListener(
+  "submit",
+  handleSubmit
+);
+
+let celsiusTemp = null;
+
+let fahrenheitTemperature =
+  document.querySelector("#fahrenheit-temp");
+fahrenheitTemperature.addEventListener(
+  "click",
+  displayFarenheitTemp
+);
+
+let celsiusTemperature = document.querySelector(
+  "#celsius-temp"
+);
+celsiusTemperature.addEventListener(
+  "click",
+  displayCelsiusTemp
+);
+
+search("Bratislava");
