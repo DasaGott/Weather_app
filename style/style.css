@@ -1,5 +1,6 @@
 body {
   font-family: monospace;
+  background: #e7eaf6;
 }
 
 h1 {
@@ -19,15 +20,28 @@ ul {
 }
 
 .weather_app {
-  border: 1px solid rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(0, 0, 0, 0.1);
   padding: 20px 40px;
   border-radius: 5px;
+  background: linear-gradient(
+    to top,
+    #f3e7e9 0%,
+    #e3eeff 99%,
+    #e3eeff 100%
+  );
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
 }
 
 .search_bar {
   border-radius: 5px;
-  border: 1px rgba(0, 0, 0, 0.4) solid;
+  border: 1px rgba(0, 0, 0, 0.2) solid;
   box-shadow: 10px 5px 10px #edb9b9;
+  background: linear-gradient(
+    to top,
+    #f3e7e9 0%,
+    #e3eeff 99%,
+    #e3eeff 100%
+  );
 }
 
 .temp-details {
@@ -50,7 +64,7 @@ small {
 .current_weather_img {
   width: 70px;
   position: relative;
-  bottom: 10px;
+  bottom: 15px;
 }
 
 .temperature {
@@ -72,6 +86,7 @@ small {
 .signature {
   font-size: 14px;
   padding-left: 10px;
+  margin-top: 10px;
 }
 
 .open_source_link {
@@ -94,7 +109,7 @@ li:first-letter {
 }
 
 .weather-forecast-day {
-  opacity: 0.6;
+  opacity: 0.7;
 }
 
 .weather-forecast-temperatures {
