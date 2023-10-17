@@ -86,3 +86,20 @@ a:hover {
 li:first-letter {
   text-transform: capitalize;
 }
+
+.weather-forecast {
+  text-align: center;
+  color: #000;
+}
+
+.weather-forecast-day {
+  opacity: 0.6;
+}
+
+.weather-forecast-temperatures {
+  font-size: 13px;
+}
+
+.weather-forecast-temperature-min {
+  opacity: 0.5;
+}
