@@ -40,6 +40,8 @@ function displayWeather(response) {
       "alt",
       response.data.weather[0].description
     );
+
+  getForecast(response.data.coord);
 }
 
 function search(city) {
@@ -60,12 +62,21 @@ function handleSubmit(event) {
 
 // Forecast
 
-function displayForecast() {
+function displayForecast(response) {
+  console.log(response.data.daily);
+
   let forecastElement =
     document.querySelector("#forecast");
 
   let forecastHTML = `<div class="row">`;
-  let days = ["Wed", "Thu", "Fri", "Sat", "Sun"];
+  let days = [
+    "Wed",
+    "Thu",
+    "Fri",
+    "Sat",
+    "Sun",
+    "Mon",
+  ];
   days.forEach(function (day) {
     forecastHTML =
       forecastHTML +
@@ -96,6 +107,12 @@ function displayForecast() {
   });
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
+}
+
+function getForecast(coordinates) {
+  let apiKey = "445905dadb3d2b0c6f1b916c9d0e3860";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&exclude=current,minutely,hourly,alerts&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
 }
 // Display current date and time
 let currentTime = new Date();
@@ -232,5 +249,4 @@ celsiusTemperature.addEventListener(
   displayCelsiusTemp
 );
 
-displayForecast();
 search("Bratislava");
