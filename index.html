@@ -59,40 +59,29 @@
               <li id="weather-description"></li>
             </ul>
           </div>
-          <div class="row">
+          <div class="row temp-details">
             <div class="col">
-              <p>
-                <img
-                  src="#"
-                  alt="weather icon"
-                  class="current_weather_img"
-                  id="icon"
-                />
-                <span
-                  class="temperature"
-                  id="temperature"
-                ></span
-                ><span class="units"
-                  ><a
-                    href="#"
-                    id="celsius-temp"
-                    class="active"
-                    >°C</a
-                  >/<a
-                    href="#"
-                    id="fahrenheit-temp"
-                    >°F</a
-                  ></span
-                >
-              </p>
+              <img
+                src="#"
+                alt="weather icon"
+                class="current_weather_img"
+                id="icon"
+              />
+              <span
+                class="temperature"
+                id="temperature"
+              ></span
+              ><span class="units">°C</span>
+              <small
+                >Feels like:
+                <span id="feels-like"> 4</span
+                >°C</small
+              >
             </div>
-            <div class="col">
+            <div
+              class="col additional-information"
+            >
               <ul>
-                <!-- <li>
-                  Precipitation:
-                  <span id="precipitation"></span
-                  >%
-                </li> -->
                 <li>
                   Humidity:
                   <span id="humidity"></span>%
@@ -100,6 +89,17 @@
                 <li>
                   Wind:
                   <span id="wind"></span>km/h
+                </li>
+                <li>
+                  Max:
+                  <span id="temp-max">19</span>°C
+                  |
+                  <span
+                    class="weather-forecast-temperature-min"
+                    >Min:
+                    <span id="temp-min"> 6</span
+                    >°C</span
+                  >
                 </li>
               </ul>
             </div>

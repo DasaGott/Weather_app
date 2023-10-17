@@ -22,7 +22,6 @@ ul {
   border: 1px solid rgba(0, 0, 0, 0.4);
   padding: 20px 40px;
   border-radius: 5px;
-  margin-bottom: 10px;
 }
 
 .search_bar {
@@ -31,10 +30,21 @@ ul {
   box-shadow: 10px 5px 10px #edb9b9;
 }
 
+.temp-details {
+  margin: 15px 0px;
+}
+
 .current_day {
   color: #232b2b;
   line-height: 1.4;
   font-size: 15px;
+}
+
+small {
+  display: block;
+  position: relative;
+  top: -25px;
+  left: 15px;
 }
 
 .current_weather_img {
@@ -49,27 +59,19 @@ ul {
 }
 
 .units {
+  font-size: 20px;
   position: relative;
   top: -25px;
   left: 5px;
 }
 
-.active {
-  color: #000;
+.additional-information {
+  font-size: 14px;
 }
 
-.active:hover {
-  cursor: default;
-  text-decoration: none;
-}
-
-a {
-  color: grey;
-}
-
-a:hover {
-  text-decoration: none;
-  color: #000;
+.signature {
+  font-size: 14px;
+  padding-left: 10px;
 }
 
 .open_source_link {
@@ -78,7 +80,7 @@ a:hover {
 }
 
 .open_source_link:hover {
-  font-size: 18px;
+  font-size: 16px;
   text-decoration: underline;
 }
 
