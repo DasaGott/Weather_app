@@ -181,6 +181,11 @@ let hours = currentTime.getHours();
 if (hours < 10) {
   hours = `0${hours}`;
 }
+
+if (hours < 7 || hours > 19) {
+  changeTheme();
+}
+
 let minutes = currentTime.getMinutes();
 if (minutes < 10) {
   minutes = `0${minutes}`;
@@ -224,6 +229,14 @@ function showPosition(position) {
 }
 
 // End of GEO API
+function changeTheme() {
+  let theme = document.querySelector("body");
+  let classes = theme.classList;
+  classes.toggle("dark");
+}
+
+let darkButton = document.querySelector("button");
+darkButton.addEventListener("click", changeTheme);
 
 let searchCity = document.querySelector(
   "#searching-form"
