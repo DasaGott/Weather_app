@@ -176,3 +176,26 @@ li:first-letter {
 .weather-forecast-temperature-min {
   opacity: 0.5;
 }
+
+@media only screen and (max-width: 600px) {
+  h1 {
+    font-size: 30px;
+  }
+  .current_weather_img {
+    width: 70px;
+  }
+
+  .temperature {
+    font-size: 35px;
+    line-height: 1;
+  }
+  .units {
+    font-size: 15px;
+    position: relative;
+    top: -15px;
+  }
+
+  #current-city {
+    margin: 10px;
+  }
+}
