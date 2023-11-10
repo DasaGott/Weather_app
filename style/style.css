@@ -181,13 +181,14 @@ li:first-letter {
   h1 {
     font-size: 30px;
   }
-  .current_weather_img {
-    width: 70px;
+  .current-media {
+    padding: 0;
   }
-
+  .current_weather_img {
+    width: 65px;
+  }
   .temperature {
     font-size: 35px;
-    line-height: 1;
   }
   .units {
     font-size: 15px;
