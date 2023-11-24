@@ -25,7 +25,7 @@
         <div class="weather_app">
           <form id="searching-form">
             <div class="row">
-              <div class="col-6">
+              <div class="col-sm-6">
                 <input
                   class="form-control search_bar"
                   type="search"
@@ -34,17 +34,17 @@
                   autocomplete="off"
                 />
               </div>
-              <div class="col-3">
+              <div class="col-sm-2">
                 <input
                   type="submit"
-                  class="btn btn-outline-primary searchButton w-100"
+                  class="btn btn-outline-primary searchButton"
                   value="Search 🔍"
                 />
               </div>
-              <div class="col-3n">
+              <div class="col-sm-2">
                 <input
                   type="submit"
-                  class="btn btn-outline-danger w-100"
+                  class="btn btn-outline-danger"
                   id="current-city"
                   value="Current city 📍"
                 />
@@ -92,7 +92,7 @@
                   Wind:
                   <span id="wind"></span>km/h
                 </li>
-                <li>
+                <li class="max-min">
                   Max:
                   <span id="temp-max">19</span>°C
                   |
@@ -112,13 +112,15 @@
           ></div>
         </div>
         <div class="signature">
-          <a
-            href="https://github.com/DasaGott/Weather_app"
-            target="_blank"
-            class="open_source_link"
-            >Open-source code</a
+          <span class="signature-text">
+            <a
+              href="https://github.com/DasaGott/Weather_app"
+              target="_blank"
+              class="open_source_link"
+              >Open-source code</a
+            >
+            by Dasa Gottlieber</span
           >
-          by Dasa Gottlieber
           <button>Change theme</button>
         </div>
       </div>

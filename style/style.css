@@ -177,7 +177,7 @@ li:first-letter {
   opacity: 0.5;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 675px) {
   h1 {
     font-size: 30px;
   }
@@ -196,7 +196,15 @@ li:first-letter {
     top: -15px;
   }
 
-  #current-city {
-    margin: 10px;
+  .btn {
+    margin: 5px;
+  }
+  .search_bar {
+    box-shadow: 5px 1px 10px #edb9b9;
+  }
+
+  .signature-text {
+    display: inline-block;
+    width: 50%;
   }
 }
