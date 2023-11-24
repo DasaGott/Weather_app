@@ -89,9 +89,11 @@ button:hover {
     rgb(20, 36, 50) 11.8%,
     rgb(124, 143, 161) 83.8%
   );
-  color: #ffe9e3;
 }
 
+.dark .search_bar::placeholder {
+  color: #ffe9e3;
+}
 .temp-details {
   margin: 15px 0px;
 }
@@ -142,6 +144,9 @@ small {
   position: relative;
 }
 
+.signature button:focus {
+  outline: none;
+}
 .open_source_link {
   color: #8a1253;
   transition: all 200ms ease-in-out;
@@ -200,7 +205,7 @@ li:first-letter {
     margin: 5px;
   }
   .search_bar {
-    box-shadow: 5px 1px 10px #edb9b9;
+    box-shadow: none;
   }
 
   .signature-text {
