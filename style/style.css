@@ -177,7 +177,7 @@ li:first-letter {
   opacity: 0.5;
 }
 
-@media only screen and (max-width: 675px) {
+@media only screen and (max-width: 770px) {
   h1 {
     font-size: 30px;
   }
