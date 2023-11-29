@@ -146,61 +146,63 @@ function getForecast(coordinates) {
 }
 
 // Display current date and time
-let currentTime = new Date();
+function setTime() {
+  let currentTime = new Date();
 
-let days = [
-  "Sunday",
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday",
-];
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
 
-let months = [
-  "January",
-  "February",
-  "March",
-  "April",
-  "May",
-  "June",
-  "July",
-  "August",
-  "September",
-  "October",
-  "November",
-  "December",
-];
+  let months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
 
-let day = days[currentTime.getDay()];
-let month = months[currentTime.getMonth()];
-let year = currentTime.getFullYear();
-let date = currentTime.getDate();
-let hours = currentTime.getHours();
-if (hours < 10) {
-  hours = `0${hours}`;
+  let day = days[currentTime.getDay()];
+  let month = months[currentTime.getMonth()];
+  let year = currentTime.getFullYear();
+  let date = currentTime.getDate();
+  let hours = currentTime.getHours();
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
+
+  if (hours < 7 || hours > 19) {
+    changeTheme();
+  }
+
+  let minutes = currentTime.getMinutes();
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+
+  let currentDate = document.querySelector(
+    "#currentDate"
+  );
+
+  currentDate.innerHTML = `${date}. ${month} ${year}`;
+
+  let currentDay = document.querySelector(
+    "#currentDay"
+  );
+  currentDay.innerHTML = `${day} ${hours}:${minutes}`;
 }
-
-if (hours < 7 || hours > 19) {
-  changeTheme();
-}
-
-let minutes = currentTime.getMinutes();
-if (minutes < 10) {
-  minutes = `0${minutes}`;
-}
-
-let currentDate = document.querySelector(
-  "#currentDate"
-);
-
-currentDate.innerHTML = `${date}. ${month} ${year}`;
-
-let currentDay = document.querySelector(
-  "#currentDay"
-);
-currentDay.innerHTML = `${day} ${hours}:${minutes}`;
 
 // End of previous task
 
@@ -248,3 +250,4 @@ searchCity.addEventListener(
 );
 
 search("Bratislava");
+setInterval(setTime, 60000);
