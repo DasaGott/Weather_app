@@ -250,4 +250,4 @@ searchCity.addEventListener(
 );
 
 search("Bratislava");
-setInterval(setTime, 60000);
+setInterval(setTime, 100);
