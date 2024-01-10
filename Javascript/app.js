@@ -183,10 +183,6 @@ function setTime() {
     hours = `0${hours}`;
   }
 
-  if (hours < 7 || hours > 19) {
-    changeTheme();
-  }
-
   let minutes = currentTime.getMinutes();
   if (minutes < 10) {
     minutes = `0${minutes}`;
@@ -250,4 +246,4 @@ searchCity.addEventListener(
 );
 
 search("Bratislava");
-setInterval(setTime, 100);
+setInterval(setTime, 1000);
